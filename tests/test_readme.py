@@ -27,7 +27,7 @@ def test_readme_shows_real_example_predictions():
 
 def test_readme_documents_all_commands():
     text = README.read_text(encoding="utf-8")
-    for command in ("train", "predict", "evaluate", "batch", "demo", "top-words"):
+    for command in ("train", "predict", "evaluate", "batch", "demo", "top-words", "compare"):
         assert f"rusent {command}" in text
 
 

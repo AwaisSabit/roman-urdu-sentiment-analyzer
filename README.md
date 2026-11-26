@@ -27,6 +27,7 @@ rusent demo
 | `rusent batch reviews.csv` | Score a CSV of reviews; writes `results.csv` and `results.json` with a counts-and-percentages breakdown. |
 | `rusent demo` | Run the model over 8 example reviews. |
 | `rusent top-words` | Show the words that most strongly point at each sentiment. |
+| `rusent compare` | Compare Logistic Regression, Naive Bayes and LinearSVC on the same held-out set. |
 
 `predict` and `batch` take `--threshold` (default 0.5): predictions below it
 are flagged as uncertain instead of being trusted. `batch` takes
