@@ -124,6 +124,8 @@ def run_comparison(
     report_path: Path = DEFAULT_REPORT_PATH,
 ) -> dict:
     """Run the comparison on the dataset and write the report. Returns results."""
+    dataset_path = Path(dataset_path)
+    report_path = Path(report_path)
     df = load_dataset(dataset_path)
     results = compare_models(df["text"].tolist(), df["sentiment"].tolist())
     report_path.parent.mkdir(parents=True, exist_ok=True)

@@ -4,6 +4,8 @@ import argparse
 import sys
 
 from .batch import format_breakdown, run_batch, sentiment_breakdown
+from .compare import DEFAULT_REPORT_PATH as COMPARE_REPORT_PATH
+from .compare import run_comparison
 from .demo import print_demo, run_demo
 from .interpret import render_top_words, top_words_per_class
 from .evaluate import DEFAULT_JSON_PATH, DEFAULT_REPORT_PATH, run_evaluation
@@ -25,6 +27,17 @@ def _load_model_or_exit(model_path):
         print(f"No trained model found at {model_path}.", file=sys.stderr)
         print("Run `rusent train` first.", file=sys.stderr)
         raise SystemExit(2)
+
+
+def cmd_compare(args) -> int:
+    results = run_comparison(args.dataset, args.report)
+    for name, metrics in sorted(
+        results.items(), key=lambda item: item[1]["macro_f1"], reverse=True
+    ):
+        print(f"{name}: accuracy {metrics['accuracy']:.4f}, "
+              f"macro F1 {metrics['macro_f1']:.4f}")
+    print(f"Report written to {args.report}.")
+    return 0
 
 
 def cmd_top_words(args) -> int:
@@ -190,6 +203,20 @@ def build_parser() -> argparse.ArgumentParser:
         "--n", type=int, default=10, help="How many words per sentiment.",
     )
     top_words.set_defaults(func=cmd_top_words)
+
+    compare = subparsers.add_parser(
+        "compare",
+        help="Compare Logistic Regression, Naive Bayes and LinearSVC.",
+    )
+    compare.add_argument(
+        "--dataset", type=str, default=str(DEFAULT_DATASET_PATH),
+        help="Path to the reviews CSV file.",
+    )
+    compare.add_argument(
+        "--report", type=str, default=str(COMPARE_REPORT_PATH),
+        help="Where to write the Markdown report.",
+    )
+    compare.set_defaults(func=cmd_compare)
     return parser
 
 
