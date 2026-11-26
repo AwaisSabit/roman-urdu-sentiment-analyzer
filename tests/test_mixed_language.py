@@ -8,7 +8,7 @@ Roman Urdu or pure English.
 import pytest
 
 from rusent.model import load_dataset, predict_sentiment, train_model
-from rusent.preprocessing import clean_text
+from rusent.preprocessing import clean_text, detect_language
 
 # (review, expected sentiment) — none of these are verbatim dataset rows.
 MIXED_EXAMPLES = [
@@ -47,6 +47,19 @@ def test_dataset_has_mixed_language_reviews():
     mixed = df[df["language"] == "mixed"]
     assert len(mixed) >= 100
     assert set(mixed["sentiment"]) == {"positive", "negative", "neutral"}
+
+
+def test_dataset_language_labels_match_detector():
+    # Every row's language column must agree with detect_language on its
+    # own text: an English base plus a Roman Urdu follow-up is mixed, not
+    # whatever the base sentence was.
+    df = load_dataset()
+    bad = [
+        (row["text"], row["language"], detect_language(row["text"]))
+        for _, row in df.iterrows()
+        if row["language"] != detect_language(row["text"])
+    ]
+    assert not bad, f"{len(bad)} rows mislabelled, e.g. {bad[:3]}"
 
 
 def test_code_switched_negation():

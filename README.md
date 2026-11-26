@@ -57,7 +57,7 @@ model does the classifying.
 
 The dataset is 420 hand-written reviews (140 positive, 140 negative, 140
 neutral) across food, shopping, delivery/service and mobile/app topics, in
-Roman Urdu (177), English (129) and mixed (114). No external dataset is used.
+Roman Urdu (143), English (62) and mixed (215). No external dataset is used.
 
 ## Results
 

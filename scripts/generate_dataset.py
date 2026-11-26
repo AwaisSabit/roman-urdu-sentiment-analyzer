@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from rusent.preprocessing import FOLLOWUP_CLAUSES as FOLLOWUPS  # noqa: E402
+from rusent.preprocessing import detect_language  # noqa: E402
 
 random.seed(42)
 
@@ -194,12 +195,20 @@ def build_rows(sentences, sentiment, target):
     seen = set()
     pool = list(sentences)
     random.shuffle(pool)
-    # First pass: every base sentence on its own.
-    for text, topic, language in pool:
+    # First pass: every base sentence on its own. The language label is
+    # detected from the text itself, not trusted from the hand-written
+    # lists — two of those lists label loanword-only Roman Urdu reviews
+    # ("login nahi ho raha, error aa raha hai har dafa") as mixed.
+    for text, topic, _language in pool:
         if text not in seen:
             seen.add(text)
-            rows.append((text, sentiment, topic, language))
+            rows.append((text, sentiment, topic, detect_language(text)))
     # Second pass: combine a base sentence with a follow-up clause until target.
+    # The language is detected from the final combined text: an English base
+    # plus a Roman Urdu follow-up (or the other way round) is mixed, not
+    # whatever the base sentence was. The joiner still follows the base
+    # sentence's hand-written language, so the generated text itself does
+    # not change — only the language label does.
     while len(rows) < target:
         base, topic, language = random.choice(sentences)
         follow = random.choice(FOLLOWUPS[sentiment])
@@ -211,7 +220,7 @@ def build_rows(sentences, sentiment, target):
         if text in seen:
             continue
         seen.add(text)
-        rows.append((text, sentiment, topic, language))
+        rows.append((text, sentiment, topic, detect_language(text)))
     return rows[:target]
 
 

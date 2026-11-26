@@ -1,16 +1,16 @@
 text,sentiment,topic,language
 "Burger was dry and stale, I could not even finish it, will not order again",negative,food,english
-"The quality is fine for the price, nothing extraordinary. theek hai",neutral,shopping,english
-The rider was fine and the order was correct and na acha na bura,neutral,delivery,english
+"The quality is fine for the price, nothing extraordinary. theek hai",neutral,shopping,mixed
+The rider was fine and the order was correct and na acha na bura,neutral,delivery,mixed
 "staff normal tha, koi khaas baat nahi thi, normal tha",neutral,delivery,roman_urdu
 "taste was horrible, paisa bilkul zaya ho gaya, bohat bura experience raha",negative,food,mixed
-"kapray ki quality bohat achi hai, stitching bhi perfect hai, highly recommended",positive,shopping,roman_urdu
+"kapray ki quality bohat achi hai, stitching bhi perfect hai, highly recommended",positive,shopping,mixed
 "khana theek tha, na bohat acha na bohat bura, kuch khaas nahi tha",neutral,food,roman_urdu
 The rider was fine and the order was correct,neutral,delivery,english
-"The biryani was alright, a bit less spicy than expected, theek hai",neutral,food,english
+"The biryani was alright, a bit less spicy than expected, theek hai",neutral,food,mixed
 "pizza normal thi, taste average tha",neutral,food,roman_urdu
-"order mein galat item bhej diya, bohat gussa aaya, not recommended at all",negative,shopping,roman_urdu
-"Delivery arrived on time, everything was as ordered. normal tha",neutral,delivery,english
+"order mein galat item bhej diya, bohat gussa aaya, not recommended at all",negative,shopping,mixed
+"Delivery arrived on time, everything was as ordered. normal tha",neutral,delivery,mixed
 "Really enjoyed the burger, juicy and cooked just right, will order again",positive,food,english
 "customer service was excellent, problem foran solve ho gayi",positive,delivery,mixed
 "Great app, the new update made everything even better",positive,mobile,english
@@ -25,8 +25,8 @@ packing was great aur product bhi bilkul perfect tha,positive,shopping,mixed
 "product is fine, kuch khaas nahi hai, na acha na bura",neutral,shopping,mixed
 "staff normal tha, koi khaas baat nahi thi, na acha na bura",neutral,delivery,roman_urdu
 "khana waqt par mila aur taste bhi kamal ka tha, friends ko bhi recommend karunga",positive,food,roman_urdu
-"Customer service replied, my issue is still being looked into and normal tha",neutral,delivery,english
-"biryani ka taste lajawab tha, masalay bilkul perfect thay, will order again",positive,food,roman_urdu
+"Customer service replied, my issue is still being looked into and normal tha",neutral,delivery,mixed
+"biryani ka taste lajawab tha, masalay bilkul perfect thay, will order again",positive,food,mixed
 "delivery 3 ghante late thi, koi call bhi nahi ki",negative,delivery,roman_urdu
 "staff was very friendly, bohat acha experience raha, will order again",positive,delivery,mixed
 "packing was great aur product bhi bilkul perfect tha, dobara zaroor aaunga",positive,shopping,mixed
@@ -34,43 +34,43 @@ packing was great aur product bhi bilkul perfect tha,positive,shopping,mixed
 "khana bilkul thanda mila, taste bhi bohat kharab tha, paisa zaya ho gaya",negative,food,roman_urdu
 "product theek hai, photo jaisa hi hai",neutral,shopping,roman_urdu
 "shoes are okay, fit theek hai, na acha na bura",neutral,shopping,mixed
-"The app works fine, a few features are a bit slow and na acha na bura",neutral,mobile,english
-"Excellent customer service, they solved my issue within minutes. paisa wasool hai",positive,delivery,english
+"The app works fine, a few features are a bit slow and na acha na bura",neutral,mobile,mixed
+"Excellent customer service, they solved my issue within minutes. paisa wasool hai",positive,delivery,mixed
 "Worst pizza ever, the crust was burnt and there was hardly any cheese. will not order again",negative,food,english
-The rider was fine and the order was correct. na acha na bura,neutral,delivery,english
+The rider was fine and the order was correct. na acha na bura,neutral,delivery,mixed
 "The latest update ruined the app, nothing works anymore. not recommended at all",negative,mobile,english
 "This app is really easy to use, everything is clear and fast",positive,mobile,english
 "pizza was so bad, cheese bhi bohat kam thi, dobara kabhi nahi aaunga",negative,food,mixed
 "app is too slow, order karna bohat mushkil hai, will not order again",negative,mobile,mixed
 "khana theek tha, taste was average",neutral,food,mixed
-"The latest update ruined the app, nothing works anymore, bohat disappointed hun",negative,mobile,english
-"burger bilkul dry tha, bilkul fresh nahi tha, not recommended at all",negative,food,roman_urdu
+"The latest update ruined the app, nothing works anymore, bohat disappointed hun",negative,mobile,mixed
+"burger bilkul dry tha, bilkul fresh nahi tha, not recommended at all",negative,food,mixed
 "staff ka behaviour bohat kharab tha, dobara nahi aaunga",negative,delivery,roman_urdu
-"rider bohat rude tha, order bhi galat de gaya, not recommended at all",negative,delivery,roman_urdu
+"rider bohat rude tha, order bhi galat de gaya, not recommended at all",negative,delivery,mixed
 The rider was polite and the food was still hot when it arrived,positive,delivery,english
 new update ke baad app bilkul kharab ho gayi hai,negative,mobile,roman_urdu
-"app bohat slow hai, order karna mushkil hai, not recommended at all",negative,mobile,roman_urdu
+"app bohat slow hai, order karna mushkil hai, not recommended at all",negative,mobile,mixed
 "order bilkul theek mila, packing bhi bohat achi thi",positive,shopping,roman_urdu
 "shoes theek hain, na bohat comfortable na bohat kharab, kuch khaas nahi tha",neutral,shopping,roman_urdu
 "biryani mein namak bohat zyada tha, khana mushkil ho gaya, bohat disappointed hun",negative,food,roman_urdu
 "The food was amazing, everything tasted fresh and delicious",positive,food,english
-"Delivery took three hours and nobody even called to update me, bohat bura experience raha",negative,delivery,english
+"Delivery took three hours and nobody even called to update me, bohat bura experience raha",negative,delivery,mixed
 "burger was fine, average taste tha",neutral,food,mixed
 "delivery was on time, sab kuch theek tha, it was fine",neutral,delivery,mixed
-"Worst pizza ever, the crust was burnt and there was hardly any cheese. paisa zaya ho gaya",negative,food,english
+"Worst pizza ever, the crust was burnt and there was hardly any cheese. paisa zaya ho gaya",negative,food,mixed
 "Delivery took three hours and nobody even called to update me, not recommended at all",negative,delivery,english
 "rider bohat polite tha aur order bilkul theek mila, friends ko bhi recommend karunga",positive,delivery,roman_urdu
 "interface bohat acha hai, everything is easy to find, will order again",positive,mobile,mixed
 "The food was cold and tasteless, a complete waste of money",negative,food,english
 "login nahi ho raha, error aa raha hai har dafa, will not order again",negative,mobile,mixed
-"The fabric quality is terrible, it faded after one wash and bohat bura experience raha",negative,shopping,english
+"The fabric quality is terrible, it faded after one wash and bohat bura experience raha",negative,shopping,mixed
 "pizza was amazing, cheese bhi bohat fresh thi, will order again",positive,food,mixed
 "app is fine, kuch features slow hain",neutral,mobile,mixed
-"Delivery was super fast, my order arrived in 25 minutes, bohat acha experience raha",positive,delivery,english
+"Delivery was super fast, my order arrived in 25 minutes, bohat acha experience raha",positive,delivery,mixed
 "Excellent customer service, they solved my issue within minutes",positive,delivery,english
 "product is fine, kuch khaas nahi hai, theek hai",neutral,shopping,mixed
 "product bohat acha hai, I am very happy with it, bohat acha experience raha",positive,shopping,mixed
-"watch do din mein kharab ho gayi, bilkul bekaar hai, not recommended at all",negative,shopping,roman_urdu
+"watch do din mein kharab ho gayi, bilkul bekaar hai, not recommended at all",negative,shopping,mixed
 "pizza was amazing, cheese bhi bohat fresh thi",positive,food,mixed
 "order bilkul theek mila, packing bhi bohat achi thi, bohat khush hun",positive,shopping,roman_urdu
 "booking process bohat easy tha, sab kuch smooth raha, paisa wasool hai",positive,delivery,roman_urdu
@@ -81,22 +81,22 @@ new update ke baad app bilkul kharab ho gayi hai,negative,mobile,roman_urdu
 "quality is very poor, ek wash mein colour fade ho gaya, bohat bura experience raha",negative,shopping,mixed
 "app is too slow, order karna bohat mushkil hai",negative,mobile,mixed
 "quality is excellent, price bhi reasonable hai, highly recommended",positive,shopping,mixed
-"The quality is fine for the price, nothing extraordinary and na acha na bura",neutral,shopping,english
+"The quality is fine for the price, nothing extraordinary and na acha na bura",neutral,shopping,mixed
 "size was wrong aur return bhi nahi ho raha, will not order again",negative,shopping,mixed
 "shoes bohat comfortable hain, size bhi bilkul theek hai, dobara zaroor aaunga",positive,shopping,roman_urdu
-"staff bohat friendly tha, bohat acha experience raha, highly recommended",positive,delivery,roman_urdu
+"staff bohat friendly tha, bohat acha experience raha, highly recommended",positive,delivery,mixed
 "update was okay, kuch naya nahi tha, it was fine",neutral,mobile,mixed
-"The food was cold and tasteless, a complete waste of money and bohat bura experience raha",negative,food,english
+"The food was cold and tasteless, a complete waste of money and bohat bura experience raha",negative,food,mixed
 "customer service ne meri baat hi nahi suni, bohat bura experience",negative,delivery,roman_urdu
 "The product looks nothing like the pictures, very disappointing",negative,shopping,english
 "shoes theek hain, na bohat comfortable na bohat kharab, theek hai",neutral,shopping,roman_urdu
-"It does what it should, no major issues so far, kuch khaas nahi tha",neutral,mobile,english
-"The product is as described, works as expected, na acha na bura",neutral,shopping,english
+"It does what it should, no major issues so far, kuch khaas nahi tha",neutral,mobile,mixed
+"The product is as described, works as expected, na acha na bura",neutral,shopping,mixed
 "Burger was dry and stale, I could not even finish it",negative,food,english
 "The app is okay, nothing new in the latest update",neutral,mobile,english
 "staff was okay, normal experience tha",neutral,delivery,mixed
 "khana garam aur fresh mila, maza aa gaya",positive,food,roman_urdu
-"shawarma mein chicken bohat kam tha, sirf salad tha, not recommended at all",negative,food,roman_urdu
+"shawarma mein chicken bohat kam tha, sirf salad tha, not recommended at all",negative,food,mixed
 The rider was rude and delivered the wrong order,negative,delivery,english
 "khana bohat acha tha, har cheez fresh thi, dobara zaroor aaunga",positive,food,roman_urdu
 "interface bohat acha hai, everything is easy to find, bohat acha experience raha",positive,mobile,mixed
@@ -110,25 +110,25 @@ Wrong size delivered and the return process is a nightmare and will not order ag
 "yeh app bohat fast hai, koi lag nahi hai, dobara zaroor aaunga",positive,mobile,roman_urdu
 "kapray ki quality theek hai, price ke hisaab se normal hai",neutral,shopping,roman_urdu
 "zinger burger bohat acha tha, bohat maza aaya",positive,food,roman_urdu
-The rider was polite and the food was still hot when it arrived and bohat khush hun,positive,delivery,english
+The rider was polite and the food was still hot when it arrived and bohat khush hun,positive,delivery,mixed
 "quality is very poor, ek wash mein colour fade ho gaya, will not order again",negative,shopping,mixed
-"The quality is fine for the price, nothing extraordinary, kuch khaas nahi tha",neutral,shopping,english
+"The quality is fine for the price, nothing extraordinary, kuch khaas nahi tha",neutral,shopping,mixed
 "product bohat acha hai, I am very happy with it",positive,shopping,mixed
 "rider was fine, order sahi mila, theek hai",neutral,delivery,mixed
-"The food was cold and tasteless, a complete waste of money. bohat disappointed hun",negative,food,english
+"The food was cold and tasteless, a complete waste of money. bohat disappointed hun",negative,food,mixed
 "shoes bohat comfortable hain, size bhi bilkul theek hai",positive,shopping,roman_urdu
-The rider was fine and the order was correct. average experience tha,neutral,delivery,english
+The rider was fine and the order was correct. average experience tha,neutral,delivery,mixed
 "order bilkul theek mila, packing bhi bohat achi thi, paisa wasool hai",positive,shopping,roman_urdu
-"The food was amazing, everything tasted fresh and delicious, bohat khush hun",positive,food,english
-"Wrong size delivered and the return process is a nightmare, dobara kabhi nahi aaunga",negative,shopping,english
-"malai boti pizza bohat tasty tha, dobara zaroor order karunga, highly recommended",positive,food,roman_urdu
+"The food was amazing, everything tasted fresh and delicious, bohat khush hun",positive,food,mixed
+"Wrong size delivered and the return process is a nightmare, dobara kabhi nahi aaunga",negative,shopping,mixed
+"malai boti pizza bohat tasty tha, dobara zaroor order karunga, highly recommended",positive,food,mixed
 "booking process bohat easy tha, sab kuch smooth raha",positive,delivery,roman_urdu
 khana bohat tasty tha and the service was excellent too,positive,food,mixed
 "yeh app bohat fast hai, koi lag nahi hai",positive,mobile,roman_urdu
-"yeh app bohat fast hai, koi lag nahi hai, highly recommended",positive,mobile,roman_urdu
+"yeh app bohat fast hai, koi lag nahi hai, highly recommended",positive,mobile,mixed
 "product is not as shown, bilkul different hai",negative,shopping,mixed
-"Fresh ingredients, great taste, I will definitely come back. bohat acha experience raha",positive,food,english
-"new update theek hai, kuch naya nahi hai, it was fine",neutral,mobile,roman_urdu
+"Fresh ingredients, great taste, I will definitely come back. bohat acha experience raha",positive,food,mixed
+"new update theek hai, kuch naya nahi hai, it was fine",neutral,mobile,mixed
 "shoes are okay, fit theek hai, average experience tha",neutral,shopping,mixed
 "staff normal tha, koi khaas baat nahi thi, average experience tha",neutral,delivery,roman_urdu
 "pizza was okay, kuch khaas nahi tha, na acha na bura",neutral,food,mixed
@@ -139,30 +139,30 @@ khana 2 ghante late mila aur thanda bhi tha,negative,food,roman_urdu
 "delivery waqt par aa gayi, sab kuch theek tha",neutral,delivery,roman_urdu
 "This watch stopped working in two days, total waste of money",negative,shopping,english
 "burger bilkul dry tha, bilkul fresh nahi tha",negative,food,roman_urdu
-"customer service bohat achi hai, meri problem foran solve kar di, highly recommended",positive,delivery,roman_urdu
+"customer service bohat achi hai, meri problem foran solve kar di, highly recommended",positive,delivery,mixed
 "login hi nahi ho raha, error aa raha hai, bohat bura experience raha",negative,mobile,roman_urdu
 "staff was okay, normal experience tha, kuch khaas nahi tha",neutral,delivery,mixed
 "new update theek hai, kuch naya nahi hai, na acha na bura",neutral,mobile,roman_urdu
 "Best pizza in town, the crust was perfect and the cheese was great",positive,food,english
-"Customer service replied, my issue is still being looked into. theek hai",neutral,delivery,english
+"Customer service replied, my issue is still being looked into. theek hai",neutral,delivery,mixed
 "biryani ka taste was outstanding, highly recommended, dobara zaroor aaunga",positive,food,mixed
 "biryani ka taste lajawab tha, masalay bilkul perfect thay",positive,food,roman_urdu
-"app theek hai, koi badi problem nahi, average experience tha",neutral,mobile,mixed
+"app theek hai, koi badi problem nahi, average experience tha",neutral,mobile,roman_urdu
 "update was okay, kuch naya nahi tha, average experience tha",neutral,mobile,mixed
-"Shoes are okay, they fit fine and look decent, na acha na bura",neutral,shopping,english
+"Shoes are okay, they fit fine and look decent, na acha na bura",neutral,shopping,mixed
 "The app works fine, a few features are a bit slow. it was fine",neutral,mobile,english
-"app har dafa crash ho jati hai, bilkul use nahi ho sakti, will not order again",negative,mobile,roman_urdu
+"app har dafa crash ho jati hai, bilkul use nahi ho sakti, will not order again",negative,mobile,mixed
 "The app crashes every time I open it, completely unusable",negative,mobile,english
 "quality is okay, price ke hisaab se theek hai",neutral,shopping,mixed
-"The app works fine, a few features are a bit slow. kuch khaas nahi tha",neutral,mobile,english
-"khana bilkul bekaar tha, paisa zaya ho gaya, will not order again",negative,food,roman_urdu
-"It does what it should, no major issues so far, average experience tha",neutral,mobile,english
+"The app works fine, a few features are a bit slow. kuch khaas nahi tha",neutral,mobile,mixed
+"khana bilkul bekaar tha, paisa zaya ho gaya, will not order again",negative,food,mixed
+"It does what it should, no major issues so far, average experience tha",neutral,mobile,mixed
 "khana bilkul bekaar tha, paisa zaya ho gaya",negative,food,roman_urdu
 "burger bilkul dry tha, bilkul fresh nahi tha, bohat bura experience raha",negative,food,roman_urdu
 "app theek chal rahi hai, koi badi problem nahi hai",neutral,mobile,roman_urdu
 "pizza was so bad, cheese bhi bohat kam thi",negative,food,mixed
 "new update bohat acha hai, sab kuch smooth chal raha hai, dobara zaroor aaunga",positive,mobile,roman_urdu
-"app theek hai, koi badi problem nahi",neutral,mobile,mixed
+"app theek hai, koi badi problem nahi",neutral,mobile,roman_urdu
 "Fresh ingredients, great taste, I will definitely come back",positive,food,english
 "staff was very friendly, bohat acha experience raha",positive,delivery,mixed
 "The latest update ruined the app, nothing works anymore",negative,mobile,english
@@ -170,12 +170,12 @@ khana 2 ghante late mila aur thanda bhi tha,negative,food,roman_urdu
 "customer service was useless, meri problem solve nahi ki, paisa zaya ho gaya",negative,delivery,mixed
 The biryani was too salty and the rice was undercooked,negative,food,english
 "The fabric is amazing, colour bhi bilkul same hai",positive,shopping,mixed
-"Fresh ingredients, great taste, I will definitely come back, dobara zaroor aaunga",positive,food,english
+"Fresh ingredients, great taste, I will definitely come back, dobara zaroor aaunga",positive,food,mixed
 "shawarma mein chicken bohat kam tha, sirf salad tha, bohat bura experience raha",negative,food,roman_urdu
 "burger was so good, fries bhi crispy thi",positive,food,mixed
-"The quality is fine for the price, nothing extraordinary and kuch khaas nahi tha",neutral,shopping,english
+"The quality is fine for the price, nothing extraordinary and kuch khaas nahi tha",neutral,shopping,mixed
 "rider was rude, order bhi galat tha, will not order again",negative,delivery,mixed
-"This watch stopped working in two days, total waste of money and bohat bura experience raha",negative,shopping,english
+"This watch stopped working in two days, total waste of money and bohat bura experience raha",negative,shopping,mixed
 delivery bohat fast thi and the rider was very polite,positive,delivery,mixed
 "pizza normal thi, taste average tha, kuch khaas nahi tha",neutral,food,roman_urdu
 "food was fresh aur garam bhi tha, maza aa gaya",positive,food,mixed
@@ -193,68 +193,68 @@ delivery bohat fast thi and the rider was very polite,positive,delivery,mixed
 "khana waqt par mila, taste normal tha",neutral,food,roman_urdu
 "khana bohat tasty tha and the service was excellent too, will order again",positive,food,mixed
 "zinger burger bohat acha tha, bohat maza aaya, bohat khush hun",positive,food,roman_urdu
-"watch ki quality bohat achi hai, bohat khubsurat hai, highly recommended",positive,shopping,roman_urdu
-"delivery 3 ghante late thi, koi call bhi nahi ki, will not order again",negative,delivery,roman_urdu
+"watch ki quality bohat achi hai, bohat khubsurat hai, highly recommended",positive,shopping,mixed
+"delivery 3 ghante late thi, koi call bhi nahi ki, will not order again",negative,delivery,mixed
 "watch do din mein kharab ho gayi, bilkul bekaar hai, paisa zaya ho gaya",negative,shopping,roman_urdu
 "pizza was amazing, cheese bhi bohat fresh thi, friends ko bhi recommend karunga",positive,food,mixed
 "shoes ka size galat bheja gaya, bilkul fit nahi aaye",negative,shopping,roman_urdu
 "The biryani was full of flavour and the portions were generous, highly recommended",positive,food,english
-"The app works fine, a few features are a bit slow, na acha na bura",neutral,mobile,english
+"The app works fine, a few features are a bit slow, na acha na bura",neutral,mobile,mixed
 "shawarma ka taste bohat acha tha, sauce bhi perfect thi",positive,food,roman_urdu
-"The food was amazing, everything tasted fresh and delicious, paisa wasool hai",positive,food,english
+"The food was amazing, everything tasted fresh and delicious, paisa wasool hai",positive,food,mixed
 "pizza normal thi, taste average tha, na acha na bura",neutral,food,roman_urdu
-"app theek hai, koi badi problem nahi, kuch khaas nahi tha",neutral,mobile,mixed
+"app theek hai, koi badi problem nahi, kuch khaas nahi tha",neutral,mobile,roman_urdu
 "product is fine, kuch khaas nahi hai, it was fine",neutral,shopping,mixed
 "quality is excellent, price bhi reasonable hai, bohat acha experience raha",positive,shopping,mixed
-"The product is as described, works as expected. average experience tha",neutral,shopping,english
-"The product looks nothing like the pictures, very disappointing, dobara kabhi nahi aaunga",negative,shopping,english
+"The product is as described, works as expected. average experience tha",neutral,shopping,mixed
+"The product looks nothing like the pictures, very disappointing, dobara kabhi nahi aaunga",negative,shopping,mixed
 "rider was rude, order bhi galat tha, dobara kabhi nahi aaunga",negative,delivery,mixed
-"The food was okay, nothing special but not bad either and average experience tha",neutral,food,english
+"The food was okay, nothing special but not bad either and average experience tha",neutral,food,mixed
 "stitching bohat kharab hai, pehli dafa pehenne par phat gaya, bohat disappointed hun",negative,shopping,roman_urdu
-"Excellent customer service, they solved my issue within minutes and dobara zaroor aaunga",positive,delivery,english
+"Excellent customer service, they solved my issue within minutes and dobara zaroor aaunga",positive,delivery,mixed
 "khana 2 ghante late mila aur thanda bhi tha, bohat bura experience raha",negative,food,roman_urdu
-"The app crashes every time I open it, completely unusable. bohat disappointed hun",negative,mobile,english
+"The app crashes every time I open it, completely unusable. bohat disappointed hun",negative,mobile,mixed
 "product photo jaisa bilkul nahi hai, bohat farq hai, paisa zaya ho gaya",negative,shopping,roman_urdu
-"The quality is fine for the price, nothing extraordinary, theek hai",neutral,shopping,english
+"The quality is fine for the price, nothing extraordinary, theek hai",neutral,shopping,mixed
 "delivery waqt par aa gayi, sab kuch theek tha, normal tha",neutral,delivery,roman_urdu
 "delivery waqt par aa gayi, sab kuch theek tha, kuch khaas nahi tha",neutral,delivery,roman_urdu
 "delivery was very late aur koi update bhi nahi di, dobara kabhi nahi aaunga",negative,delivery,mixed
 "customer service ne jawab diya, problem abhi pending hai, kuch khaas nahi tha",neutral,delivery,roman_urdu
 "shawarma mein chicken bohat kam tha, sirf salad tha, bohat disappointed hun",negative,food,roman_urdu
-"product theek hai, photo jaisa hi hai, it was fine",neutral,shopping,roman_urdu
-"kapray ki quality theek hai, price ke hisaab se normal hai, it was fine",neutral,shopping,roman_urdu
+"product theek hai, photo jaisa hi hai, it was fine",neutral,shopping,mixed
+"kapray ki quality theek hai, price ke hisaab se normal hai, it was fine",neutral,shopping,mixed
 "quality is okay, price ke hisaab se theek hai, theek hai",neutral,shopping,mixed
-"The food was okay, nothing special but not bad either and theek hai",neutral,food,english
-"Excellent customer service, they solved my issue within minutes, paisa wasool hai",positive,delivery,english
-"The app works fine, a few features are a bit slow, kuch khaas nahi tha",neutral,mobile,english
-"burger average tha, kuch khaas nahi tha, it was fine",neutral,food,roman_urdu
+"The food was okay, nothing special but not bad either and theek hai",neutral,food,mixed
+"Excellent customer service, they solved my issue within minutes, paisa wasool hai",positive,delivery,mixed
+"The app works fine, a few features are a bit slow, kuch khaas nahi tha",neutral,mobile,mixed
+"burger average tha, kuch khaas nahi tha, it was fine",neutral,food,mixed
 "customer service ne meri baat hi nahi suni, bohat bura experience, bohat disappointed hun",negative,delivery,roman_urdu
 "dessert bohat sweet aur fresh tha, bohat pasand aaya",positive,food,roman_urdu
 "pizza mein cheese bohat kam thi, bilkul maza nahi aaya",negative,food,roman_urdu
 "Great value for money, the fabric feels really good",positive,shopping,english
 "staff normal tha, koi khaas baat nahi thi",neutral,delivery,roman_urdu
 "staff was very friendly, bohat acha experience raha, highly recommended",positive,delivery,mixed
-"The quality is fine for the price, nothing extraordinary, average experience tha",neutral,shopping,english
-"Shoes are okay, they fit fine and look decent and theek hai",neutral,shopping,english
+"The quality is fine for the price, nothing extraordinary, average experience tha",neutral,shopping,mixed
+"Shoes are okay, they fit fine and look decent and theek hai",neutral,shopping,mixed
 The rider was polite and the food was still hot when it arrived and highly recommended,positive,delivery,english
 "This app is really easy to use, everything is clear and fast, will order again",positive,mobile,english
 "customer service was useless, meri problem solve nahi ki",negative,delivery,mixed
 "khana theek tha, na bohat acha na bohat bura",neutral,food,roman_urdu
-"Customer service replied, my issue is still being looked into, theek hai",neutral,delivery,english
+"Customer service replied, my issue is still being looked into, theek hai",neutral,delivery,mixed
 "update was okay, kuch naya nahi tha, theek hai",neutral,mobile,mixed
 "customer service bohat achi hai, meri problem foran solve kar di",positive,delivery,roman_urdu
-"new update bohat acha hai, sab kuch smooth chal raha hai, highly recommended",positive,mobile,roman_urdu
+"new update bohat acha hai, sab kuch smooth chal raha hai, highly recommended",positive,mobile,mixed
 "staff was very friendly, bohat acha experience raha, friends ko bhi recommend karunga",positive,delivery,mixed
-Delivery took three hours and nobody even called to update me and bohat disappointed hun,negative,delivery,english
+Delivery took three hours and nobody even called to update me and bohat disappointed hun,negative,delivery,mixed
 "biryani theek thi, masalay thore kam thay",neutral,food,roman_urdu
 "taste was horrible, paisa bilkul zaya ho gaya, paisa zaya ho gaya",negative,food,mixed
 "pizza was so bad, cheese bhi bohat kam thi, paisa zaya ho gaya",negative,food,mixed
 "The app works fine, a few features are a bit slow",neutral,mobile,english
-"Great app, the new update made everything even better, bohat khush hun",positive,mobile,english
-Customer service ignored my complaint completely and bohat bura experience raha,negative,delivery,english
+"Great app, the new update made everything even better, bohat khush hun",positive,mobile,mixed
+Customer service ignored my complaint completely and bohat bura experience raha,negative,delivery,mixed
 "staff bohat friendly tha, bohat acha experience raha",positive,delivery,roman_urdu
 app bohat fast hai and the design is beautiful,positive,mobile,mixed
-"pizza mein cheese bohat kam thi, bilkul maza nahi aaya, not recommended at all",negative,food,roman_urdu
+"pizza mein cheese bohat kam thi, bilkul maza nahi aaya, not recommended at all",negative,food,mixed
 "biryani ka taste was outstanding, highly recommended, will order again",positive,food,mixed
 "khana garam aur fresh mila, maza aa gaya, dobara zaroor aaunga",positive,food,roman_urdu
 "Shoes are okay, they fit fine and look decent",neutral,shopping,english
@@ -263,7 +263,7 @@ app bohat fast hai and the design is beautiful,positive,mobile,mixed
 "product theek hai, photo jaisa hi hai, kuch khaas nahi tha",neutral,shopping,roman_urdu
 "customer service was excellent, problem foran solve ho gayi, friends ko bhi recommend karunga",positive,delivery,mixed
 "customer service ne jawab diya, problem abhi pending hai",neutral,delivery,roman_urdu
-"burger bohat juicy tha aur fries bhi crispy thi, will order again",positive,food,roman_urdu
+"burger bohat juicy tha aur fries bhi crispy thi, will order again",positive,food,mixed
 "new update bohat acha hai, sab kuch smooth chal raha hai",positive,mobile,roman_urdu
 "khana waqt par mila, taste normal tha, normal tha",neutral,food,roman_urdu
 "shoes theek hain, na bohat comfortable na bohat kharab, normal tha",neutral,shopping,roman_urdu
@@ -272,16 +272,16 @@ app bohat fast hai and the design is beautiful,positive,mobile,mixed
 "malai boti pizza bohat tasty tha, dobara zaroor order karunga",positive,food,roman_urdu
 "Customer service replied, my issue is still being looked into and it was fine",neutral,delivery,english
 "Average pizza, the taste was fine but nothing memorable",neutral,food,english
-"Customer service replied, my issue is still being looked into and average experience tha",neutral,delivery,english
-"khana 2 ghante late mila aur thanda bhi tha, will not order again",negative,food,roman_urdu
+"Customer service replied, my issue is still being looked into and average experience tha",neutral,delivery,mixed
+"khana 2 ghante late mila aur thanda bhi tha, will not order again",negative,food,mixed
 "watch ki quality bohat achi hai, bohat khubsurat hai",positive,shopping,roman_urdu
 "pizza was okay, kuch khaas nahi tha",neutral,food,mixed
 "app bohat easy hai, order karna bohat asaan hai",positive,mobile,roman_urdu
 "staff bohat friendly tha, bohat acha experience raha, paisa wasool hai",positive,delivery,roman_urdu
-"khana waqt par mila aur taste bhi kamal ka tha, highly recommended",positive,food,roman_urdu
-"Really enjoyed the burger, juicy and cooked just right and friends ko bhi recommend karunga",positive,food,english
+"khana waqt par mila aur taste bhi kamal ka tha, highly recommended",positive,food,mixed
+"Really enjoyed the burger, juicy and cooked just right and friends ko bhi recommend karunga",positive,food,mixed
 "Beautiful watch, looks premium and works perfectly",positive,shopping,english
-"app bohat easy hai, order karna bohat asaan hai, will order again",positive,mobile,roman_urdu
+"app bohat easy hai, order karna bohat asaan hai, will order again",positive,mobile,mixed
 "app is fine, kuch features slow hain, normal tha",neutral,mobile,mixed
 "yeh app bohat fast hai, koi lag nahi hai, bohat khush hun",positive,mobile,roman_urdu
 "biryani ka taste was outstanding, highly recommended",positive,food,mixed
@@ -289,35 +289,35 @@ app bohat fast hai and the design is beautiful,positive,mobile,mixed
 "The product is as described, works as expected, it was fine",neutral,shopping,english
 "pizza was so bad, cheese bhi bohat kam thi, bohat bura experience raha",negative,food,mixed
 "login hi nahi ho raha, error aa raha hai",negative,mobile,roman_urdu
-"staff ka behaviour bohat kharab tha, dobara nahi aaunga, not recommended at all",negative,delivery,roman_urdu
+"staff ka behaviour bohat kharab tha, dobara nahi aaunga, not recommended at all",negative,delivery,mixed
 "The product is as described, works as expected and it was fine",neutral,shopping,english
 "app normal hai, kuch features slow hain, normal tha",neutral,mobile,roman_urdu
-The biryani was too salty and the rice was undercooked. bohat bura experience raha,negative,food,english
+The biryani was too salty and the rice was undercooked. bohat bura experience raha,negative,food,mixed
 "booking process bohat easy tha, sab kuch smooth raha, bohat khush hun",positive,delivery,roman_urdu
 "taste was horrible, paisa bilkul zaya ho gaya, will not order again",negative,food,mixed
 "burger average tha, kuch khaas nahi tha",neutral,food,roman_urdu
-"Fresh ingredients, great taste, I will definitely come back, bohat acha experience raha",positive,food,english
+"Fresh ingredients, great taste, I will definitely come back, bohat acha experience raha",positive,food,mixed
 "app bohat easy hai, order karna bohat asaan hai, bohat khush hun",positive,mobile,roman_urdu
 "biryani theek thi, masalay thore kam thay, kuch khaas nahi tha",neutral,food,roman_urdu
 "app keeps crashing, bilkul use nahi ho sakti",negative,mobile,mixed
 "watch theek chal rahi hai, abhi tak koi problem nahi",neutral,shopping,roman_urdu
-"This app is really easy to use, everything is clear and fast. dobara zaroor aaunga",positive,mobile,english
+"This app is really easy to use, everything is clear and fast. dobara zaroor aaunga",positive,mobile,mixed
 "app is very smooth, koi problem nahi hai, dobara zaroor aaunga",positive,mobile,mixed
 "delivery was on time, sab kuch theek tha, na acha na bura",neutral,delivery,mixed
 "Delivery arrived on time, everything was as ordered",neutral,delivery,english
 "Really enjoyed the burger, juicy and cooked just right",positive,food,english
-"The app is okay, nothing new in the latest update, kuch khaas nahi tha",neutral,mobile,english
-"burger bilkul dry tha, bilkul fresh nahi tha, will not order again",negative,food,roman_urdu
+"The app is okay, nothing new in the latest update, kuch khaas nahi tha",neutral,mobile,mixed
+"burger bilkul dry tha, bilkul fresh nahi tha, will not order again",negative,food,mixed
 The biryani was full of flavour and the portions were generous,positive,food,english
 "app bohat easy hai, order karna bohat asaan hai, dobara zaroor aaunga",positive,mobile,roman_urdu
 "rider bohat rude tha, order bhi galat de gaya, bohat disappointed hun",negative,delivery,roman_urdu
-"Excellent customer service, they solved my issue within minutes, bohat khush hun",positive,delivery,english
+"Excellent customer service, they solved my issue within minutes, bohat khush hun",positive,delivery,mixed
 "khana bohat acha tha, har cheez fresh thi",positive,food,roman_urdu
 "khana theek tha, taste was average, na acha na bura",neutral,food,mixed
 "Average pizza, the taste was fine but nothing memorable. it was fine",neutral,food,english
 "shawarma mein chicken bohat kam tha, sirf salad tha, dobara kabhi nahi aaunga",negative,food,roman_urdu
 "burger bilkul dry tha, bilkul fresh nahi tha, dobara kabhi nahi aaunga",negative,food,roman_urdu
-"product photo jaisa bilkul nahi hai, bohat farq hai, will not order again",negative,shopping,roman_urdu
+"product photo jaisa bilkul nahi hai, bohat farq hai, will not order again",negative,shopping,mixed
 size was wrong aur return bhi nahi ho raha,negative,shopping,mixed
 "rider was fine, order sahi mila",neutral,delivery,mixed
 "The app works smoothly, no crashes at all",positive,mobile,english
@@ -328,16 +328,16 @@ pizza bilkul fresh tha aur cheese bhi zabardast thi,positive,food,roman_urdu
 "burger average tha, kuch khaas nahi tha, theek hai",neutral,food,roman_urdu
 "price ke hisaab se quality bohat achi hai, paisa wasool hai",positive,shopping,roman_urdu
 "yeh kurta bohat acha hai, colour bhi bilkul waisa hi hai jaisa photo mein tha",positive,shopping,roman_urdu
-"login nahi ho raha, error aa raha hai har dafa",negative,mobile,mixed
+"login nahi ho raha, error aa raha hai har dafa",negative,mobile,roman_urdu
 "Shoes are very comfortable and the size is perfect, will order again",positive,shopping,english
-"This watch stopped working in two days, total waste of money, bohat disappointed hun",negative,shopping,english
+"This watch stopped working in two days, total waste of money, bohat disappointed hun",negative,shopping,mixed
 "interface bohat acha hai, everything is easy to find",positive,mobile,mixed
 "watch do din mein kharab ho gayi, bilkul bekaar hai",negative,shopping,roman_urdu
 "quality is excellent, price bhi reasonable hai, dobara zaroor aaunga",positive,shopping,mixed
 "taste was horrible, paisa bilkul zaya ho gaya",negative,food,mixed
 "food was fresh aur garam bhi tha, maza aa gaya, highly recommended",positive,food,mixed
 Customer service ignored my complaint completely,negative,delivery,english
-"khana bohat acha tha, har cheez fresh thi, will order again",positive,food,roman_urdu
+"khana bohat acha tha, har cheez fresh thi, will order again",positive,food,mixed
 "app ka design bohat acha hai, sab kuch clear hai",positive,mobile,roman_urdu
 "product photo jaisa bilkul nahi hai, bohat farq hai",negative,shopping,roman_urdu
 "app theek hai, koi badi problem nahi, it was fine",neutral,mobile,mixed
@@ -347,18 +347,18 @@ Customer service ignored my complaint completely,negative,delivery,english
 "shoes ka size galat bheja gaya, bilkul fit nahi aaye, dobara kabhi nahi aaunga",negative,shopping,roman_urdu
 "product bohat acha hai, I am very happy with it, friends ko bhi recommend karunga",positive,shopping,mixed
 "app normal hai, kuch features slow hain, na acha na bura",neutral,mobile,roman_urdu
-"Beautiful watch, looks premium and works perfectly. friends ko bhi recommend karunga",positive,shopping,english
+"Beautiful watch, looks premium and works perfectly. friends ko bhi recommend karunga",positive,shopping,mixed
 "khana 2 ghante late mila aur thanda bhi tha, bohat disappointed hun",negative,food,roman_urdu
 "kapray ki quality theek hai, price ke hisaab se normal hai, normal tha",neutral,shopping,roman_urdu
 burger was dry aur bilkul fresh nahi tha,negative,food,mixed
 "rider bohat polite tha aur order bilkul theek mila, bohat acha experience raha",positive,delivery,roman_urdu
 "burger bohat juicy tha aur fries bhi crispy thi, bohat acha experience raha",positive,food,roman_urdu
 "customer service bohat achi hai, meri problem foran solve kar di, dobara zaroor aaunga",positive,delivery,roman_urdu
-"price ke hisaab se quality bohat achi hai, paisa wasool hai, will order again",positive,shopping,roman_urdu
+"price ke hisaab se quality bohat achi hai, paisa wasool hai, will order again",positive,shopping,mixed
 The rider was fine and the order was correct and it was fine,neutral,delivery,english
 "product bohat acha hai, I am very happy with it, highly recommended",positive,shopping,mixed
-"The app crashes every time I open it, completely unusable and bohat disappointed hun",negative,mobile,english
-"Shoes are okay, they fit fine and look decent. average experience tha",neutral,shopping,english
+"The app crashes every time I open it, completely unusable and bohat disappointed hun",negative,mobile,mixed
+"Shoes are okay, they fit fine and look decent. average experience tha",neutral,shopping,mixed
 "shawarma mein chicken bohat kam tha, sirf salad tha",negative,food,roman_urdu
 Wrong size delivered and the return process is a nightmare,negative,shopping,english
 "The food was okay, nothing special but not bad either",neutral,food,english
@@ -369,26 +369,26 @@ delivery was very late aur koi update bhi nahi di,negative,delivery,mixed
 "new update ke baad app bilkul kharab ho gayi hai, bohat bura experience raha",negative,mobile,roman_urdu
 "This app is so slow, it takes forever to load anything",negative,mobile,english
 "update was okay, kuch naya nahi tha",neutral,mobile,mixed
-The rider was fine and the order was correct and normal tha,neutral,delivery,english
+The rider was fine and the order was correct and normal tha,neutral,delivery,mixed
 "order mein galat item bhej diya, bohat gussa aaya",negative,shopping,roman_urdu
 "new update theek hai, kuch naya nahi hai, normal tha",neutral,mobile,roman_urdu
 "staff was okay, normal experience tha, na acha na bura",neutral,delivery,mixed
-"order cancel kar diya bina bataye, bohat pareshani hui, not recommended at all",negative,delivery,roman_urdu
+"order cancel kar diya bina bataye, bohat pareshani hui, not recommended at all",negative,delivery,mixed
 "delivery bohat fast thi, order 30 minute mein aa gaya, bohat acha experience raha",positive,delivery,roman_urdu
 "kapray ki quality bohat kharab hai, ek wash mein colour fade ho gaya",negative,shopping,roman_urdu
 khana waqt par mila aur taste bhi kamal ka tha,positive,food,roman_urdu
 rider bohat polite tha aur order bilkul theek mila,positive,delivery,roman_urdu
 "taste was horrible, paisa bilkul zaya ho gaya, bohat disappointed hun",negative,food,mixed
-"The biryani was too salty and the rice was undercooked, bohat bura experience raha",negative,food,english
-"The rider was fine and the order was correct, na acha na bura",neutral,delivery,english
+"The biryani was too salty and the rice was undercooked, bohat bura experience raha",negative,food,mixed
+"The rider was fine and the order was correct, na acha na bura",neutral,delivery,mixed
 "burger was fine, average taste tha, normal tha",neutral,food,mixed
-"kapray ki quality bohat kharab hai, ek wash mein colour fade ho gaya, will not order again",negative,shopping,roman_urdu
-"The app is okay, nothing new in the latest update. na acha na bura",neutral,mobile,english
+"kapray ki quality bohat kharab hai, ek wash mein colour fade ho gaya, will not order again",negative,shopping,mixed
+"The app is okay, nothing new in the latest update. na acha na bura",neutral,mobile,mixed
 "watch theek chal rahi hai, abhi tak koi problem nahi, normal tha",neutral,shopping,roman_urdu
 "The biryani was alright, a bit less spicy than expected. it was fine",neutral,food,english
 "customer service was useless, meri problem solve nahi ki, bohat disappointed hun",negative,delivery,mixed
-"fries bilkul soggy thi, bilkul crispy nahi thi, not recommended at all",negative,food,roman_urdu
-"pizza normal thi, taste average tha, it was fine",neutral,food,roman_urdu
+"fries bilkul soggy thi, bilkul crispy nahi thi, not recommended at all",negative,food,mixed
+"pizza normal thi, taste average tha, it was fine",neutral,food,mixed
 "delivery bohat fast thi and the rider was very polite, paisa wasool hai",positive,delivery,mixed
 burger bohat juicy tha aur fries bhi crispy thi,positive,food,roman_urdu
 "packing was great aur product bhi bilkul perfect tha, bohat khush hun",positive,shopping,mixed
@@ -396,26 +396,26 @@ burger bohat juicy tha aur fries bhi crispy thi,positive,food,roman_urdu
 "kapray ki quality bohat achi hai, stitching bhi perfect hai",positive,shopping,roman_urdu
 "new update theek hai, kuch naya nahi hai",neutral,mobile,roman_urdu
 "biryani mein namak bohat zyada tha, khana mushkil ho gaya",negative,food,roman_urdu
-"The product is as described, works as expected, average experience tha",neutral,shopping,english
+"The product is as described, works as expected, average experience tha",neutral,shopping,mixed
 "It does what it should, no major issues so far",neutral,mobile,english
 Delivery took three hours and nobody even called to update me,negative,delivery,english
 "stitching is terrible, pehli dafa mein phat gaya",negative,shopping,mixed
 "pizza bilkul fresh tha aur cheese bhi zabardast thi, friends ko bhi recommend karunga",positive,food,roman_urdu
 khana bilkul thanda tha and the taste was terrible,negative,food,mixed
-"Best pizza in town, the crust was perfect and the cheese was great. friends ko bhi recommend karunga",positive,food,english
+"Best pizza in town, the crust was perfect and the cheese was great. friends ko bhi recommend karunga",positive,food,mixed
 "app is too slow, order karna bohat mushkil hai, not recommended at all",negative,mobile,mixed
-"zinger burger bohat acha tha, bohat maza aaya, highly recommended",positive,food,roman_urdu
+"zinger burger bohat acha tha, bohat maza aaya, highly recommended",positive,food,mixed
 "rider bohat rude tha, order bhi galat de gaya",negative,delivery,roman_urdu
-Delivery took three hours and nobody even called to update me. dobara kabhi nahi aaunga,negative,delivery,english
+Delivery took three hours and nobody even called to update me. dobara kabhi nahi aaunga,negative,delivery,mixed
 Shoes are very comfortable and the size is perfect,positive,shopping,english
 "rider was rude, order bhi galat tha",negative,delivery,mixed
 "kapray ki quality bohat kharab hai, ek wash mein colour fade ho gaya, paisa zaya ho gaya",negative,shopping,roman_urdu
-"Delivery arrived on time, everything was as ordered. theek hai",neutral,delivery,english
+"Delivery arrived on time, everything was as ordered. theek hai",neutral,delivery,mixed
 "The biryani was alright, a bit less spicy than expected",neutral,food,english
 "product is fine, kuch khaas nahi hai",neutral,shopping,mixed
 "kapray ki quality bohat kharab hai, ek wash mein colour fade ho gaya, dobara kabhi nahi aaunga",negative,shopping,roman_urdu
 "product theek hai, photo jaisa hi hai, na acha na bura",neutral,shopping,roman_urdu
-"rider bohat polite tha aur order bilkul theek mila, highly recommended",positive,delivery,roman_urdu
-"product photo jaisa bilkul nahi hai, bohat farq hai, not recommended at all",negative,shopping,roman_urdu
+"rider bohat polite tha aur order bilkul theek mila, highly recommended",positive,delivery,mixed
+"product photo jaisa bilkul nahi hai, bohat farq hai, not recommended at all",negative,shopping,mixed
 "stitching bohat kharab hai, pehli dafa pehenne par phat gaya",negative,shopping,roman_urdu
 "delivery bohat fast thi, order 30 minute mein aa gaya",positive,delivery,roman_urdu
