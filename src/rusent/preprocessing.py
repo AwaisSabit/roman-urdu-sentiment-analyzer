@@ -21,10 +21,9 @@ SPELLING_VARIANTS = {
     "fres": "fresh",
     # negation and verbs
     "nhi": "nahi", "ni": "nahi", "nahe": "nahi", "nahin": "nahi",
-    "he": "hai", "ha": "hai", "hy": "hai",
+    "ha": "hai", "hy": "hai",
     "ta": "tha", "thaa": "tha",
     "ti": "thi", "thee": "thi",
-    "they": "thay",
     "hn": "hain", "han": "hain",
     "krna": "karna",
     "kro": "karo",

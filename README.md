@@ -86,7 +86,7 @@ mistaken for negative, and one neutral review went the same way. See
 | Model | Accuracy | Macro F1 |
 | --- | --- | --- |
 | LinearSVC | 0.968 | 0.967 |
-| Naive Bayes | 0.968 | 0.967 |
+| Naive Bayes | 0.957 | 0.957 |
 | Logistic Regression | 0.946 | 0.938 |
 
 LinearSVC and Naive Bayes scored slightly higher — but Logistic Regression is
@@ -98,8 +98,8 @@ scores and the uncertain flag depend on. Full per-class numbers are in
 
 Top words per sentiment (`rusent top-words`):
 
-- **positive:** bohat acha, bohat, acha, fast, excellent
-- **negative:** not, bilkul, bura experience, nahi, bohat bura
+- **positive:** bohat acha, bohat, bhi, acha, fast
+- **negative:** not, ho, bilkul, bura experience, nahi
 - **neutral:** na, theek, fine, normal, was fine
 
 Negation carries the negative class — "not" and "nahi" are its strongest

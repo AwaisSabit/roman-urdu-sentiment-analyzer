@@ -19,8 +19,17 @@ def test_normalises_nahi_variants():
 
 
 def test_normalises_hai_variants():
-    assert clean_text("yeh kya he") == "yeh kya hai"
+    assert clean_text("yeh kya ha") == "yeh kya hai"
     assert clean_text("bohat acha hy") == "bohat acha hai"
+
+
+def test_english_he_and_they_are_not_rewritten():
+    # "he" and "they" are also ordinary English pronouns — the normaliser
+    # used to rewrite them into the Roman Urdu "hai" and "thay".
+    assert clean_text("they solved my issue within minutes") == (
+        "they solved my issue within minutes"
+    )
+    assert clean_text("he was rude") == "he was rude"
 
 
 def test_normalises_accha_variants():
