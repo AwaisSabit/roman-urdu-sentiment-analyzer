@@ -70,11 +70,12 @@ def train_and_save(
     return model
 
 
-def predict_sentiment(model: Pipeline, text: str) -> dict:
+def predict_sentiment(model: Pipeline, text: str, threshold: float = UNCERTAIN_THRESHOLD) -> dict:
     """Predict one review. Returns label, confidence and per-class scores.
 
     Empty or punctuation-only text has no signal, so it comes back as
     neutral with zero confidence and is flagged uncertain.
+    Predictions with confidence below `threshold` are flagged uncertain.
     """
     from .preprocessing import clean_text
 
@@ -96,5 +97,5 @@ def predict_sentiment(model: Pipeline, text: str) -> dict:
         "probabilities": {
             classes[i]: float(probabilities[i]) for i in range(len(classes))
         },
-        "uncertain": confidence < UNCERTAIN_THRESHOLD,
+        "uncertain": confidence < threshold,
     }

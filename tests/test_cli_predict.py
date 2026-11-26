@@ -60,6 +60,15 @@ def test_predict_empty_text_is_uncertain(model_path, capsys):
     assert "Uncertain" in out
 
 
+def test_predict_threshold_option_flags_uncertain(model_path, capsys):
+    main(["predict", "khana bohat acha tha", "--model", str(model_path),
+          "--threshold", "0.99"])
+    out = capsys.readouterr().out
+    assert "Sentiment: positive" in out
+    assert "Uncertain" in out
+    assert "0.99" in out
+
+
 def test_predict_without_model_exits_with_hint(tmp_path, capsys):
     with pytest.raises(SystemExit) as exc:
         main(["predict", "khana acha tha", "--model", str(tmp_path / "missing.joblib")])

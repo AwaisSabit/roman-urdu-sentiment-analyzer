@@ -85,6 +85,21 @@ def test_empty_text_is_uncertain_neutral(trained):
     assert result["uncertain"] is True
 
 
+def test_threshold_flags_low_confidence_as_uncertain(trained):
+    normal = predict_sentiment(trained, "khana bohat acha tha")
+    assert normal["uncertain"] is False
+    strict = predict_sentiment(trained, "khana bohat acha tha", threshold=0.99)
+    assert strict["uncertain"] is True
+    assert strict["label"] == normal["label"]
+
+
+def test_threshold_zero_trusts_everything_except_empty(trained):
+    result = predict_sentiment(trained, "khana bohat acha tha", threshold=0.0)
+    assert result["uncertain"] is False
+    empty = predict_sentiment(trained, "", threshold=0.0)
+    assert empty["uncertain"] is True
+
+
 def test_save_and_load_round_trip(trained, tmp_path):
     path = tmp_path / "model.joblib"
     save_model(trained, path)

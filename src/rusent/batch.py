@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .model import LABELS, predict_sentiment
+from .model import UNCERTAIN_THRESHOLD, LABELS, predict_sentiment
 
 
 def sentiment_breakdown(results: list) -> dict:
@@ -42,10 +42,11 @@ def format_breakdown(breakdown: dict) -> str:
     return "\n".join(lines)
 
 
-def score_texts(model, texts) -> list:
+def score_texts(model, texts, threshold: float = UNCERTAIN_THRESHOLD) -> list:
     """Score a list of review texts. Returns one result dict per text."""
     return [
-        {"text": text, **predict_sentiment(model, text)} for text in texts
+        {"text": text, **predict_sentiment(model, text, threshold)}
+        for text in texts
     ]
 
 
@@ -55,6 +56,7 @@ def run_batch(
     output_json,
     model,
     text_column: str = "text",
+    threshold: float = UNCERTAIN_THRESHOLD,
 ) -> dict:
     """Read reviews from a CSV, score them, write a results CSV and JSON.
 
@@ -73,7 +75,7 @@ def run_batch(
             f"Available columns: {', '.join(df.columns)}"
         )
     texts = df[text_column].fillna("").astype(str).tolist()
-    results = score_texts(model, texts)
+    results = score_texts(model, texts, threshold)
 
     out_df = pd.DataFrame(
         [

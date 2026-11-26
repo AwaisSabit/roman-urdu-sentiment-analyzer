@@ -36,7 +36,8 @@ def cmd_batch(args) -> int:
     model = _load_model_or_exit(args.model)
     try:
         payload = run_batch(
-            args.input, args.output, args.json, model, args.text_column
+            args.input, args.output, args.json, model, args.text_column,
+            args.threshold,
         )
     except ValueError as exc:
         print(str(exc), file=sys.stderr)
@@ -72,14 +73,14 @@ def cmd_train(args) -> int:
 
 def cmd_predict(args) -> int:
     model = _load_model_or_exit(args.model)
-    result = predict_sentiment(model, args.text)
+    result = predict_sentiment(model, args.text, args.threshold)
     print(f"Sentiment: {result['label']}")
     print(f"Confidence: {result['confidence']:.2f}")
     for label, score in sorted(result["probabilities"].items()):
         print(f"  {label}: {score:.2f}")
     if result["uncertain"]:
         print("Uncertain: confidence is below the threshold "
-              f"({UNCERTAIN_THRESHOLD}), treat this as a guess.")
+              f"({args.threshold}), treat this as a guess.")
     return 0
 
 
@@ -98,6 +99,10 @@ def build_parser() -> argparse.ArgumentParser:
     predict.add_argument(
         "--model", type=str, default=str(DEFAULT_MODEL_PATH),
         help="Path to the trained model file.",
+    )
+    predict.add_argument(
+        "--threshold", type=float, default=UNCERTAIN_THRESHOLD,
+        help="Confidence below this is flagged as uncertain (default 0.5).",
     )
     predict.set_defaults(func=cmd_predict)
 
@@ -150,6 +155,10 @@ def build_parser() -> argparse.ArgumentParser:
     batch.add_argument(
         "--text-column", type=str, default="text",
         help="Name of the column holding the review text.",
+    )
+    batch.add_argument(
+        "--threshold", type=float, default=UNCERTAIN_THRESHOLD,
+        help="Confidence below this is flagged as uncertain (default 0.5).",
     )
     batch.set_defaults(func=cmd_batch)
 
