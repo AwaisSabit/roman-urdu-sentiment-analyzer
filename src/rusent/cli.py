@@ -4,6 +4,7 @@ import argparse
 import sys
 
 from .batch import run_batch
+from .demo import print_demo, run_demo
 from .evaluate import DEFAULT_JSON_PATH, DEFAULT_REPORT_PATH, run_evaluation
 from .model import (
     DEFAULT_DATASET_PATH,
@@ -23,6 +24,12 @@ def _load_model_or_exit(model_path):
         print(f"No trained model found at {model_path}.", file=sys.stderr)
         print("Run `rusent train` first.", file=sys.stderr)
         raise SystemExit(2)
+
+
+def cmd_demo(args) -> int:
+    model = _load_model_or_exit(args.model)
+    print_demo(run_demo(model))
+    return 0
 
 
 def cmd_batch(args) -> int:
@@ -148,6 +155,15 @@ def build_parser() -> argparse.ArgumentParser:
         help="Name of the column holding the review text.",
     )
     batch.set_defaults(func=cmd_batch)
+
+    demo = subparsers.add_parser(
+        "demo", help="Run the model over a few example reviews."
+    )
+    demo.add_argument(
+        "--model", type=str, default=str(DEFAULT_MODEL_PATH),
+        help="Path to the trained model file.",
+    )
+    demo.set_defaults(func=cmd_demo)
     return parser
 
 
