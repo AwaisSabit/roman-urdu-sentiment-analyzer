@@ -3,6 +3,7 @@
 import argparse
 import sys
 
+from .batch import run_batch
 from .evaluate import DEFAULT_JSON_PATH, DEFAULT_REPORT_PATH, run_evaluation
 from .model import (
     DEFAULT_DATASET_PATH,
@@ -22,6 +23,24 @@ def _load_model_or_exit(model_path):
         print(f"No trained model found at {model_path}.", file=sys.stderr)
         print("Run `rusent train` first.", file=sys.stderr)
         raise SystemExit(2)
+
+
+def cmd_batch(args) -> int:
+    model = _load_model_or_exit(args.model)
+    try:
+        payload = run_batch(
+            args.input, args.output, args.json, model, args.text_column
+        )
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    print(f"Scored {payload['total']} reviews.")
+    for label, stats in payload["breakdown"].items():
+        print(f"  {label}: {stats['count']} ({stats['percentage']}%)")
+    if payload["uncertain_count"]:
+        print(f"Uncertain predictions: {payload['uncertain_count']}.")
+    print(f"Results written to {args.output} and {args.json}.")
+    return 0
 
 
 def cmd_evaluate(args) -> int:
@@ -107,6 +126,28 @@ def build_parser() -> argparse.ArgumentParser:
         help="Where to write the JSON metrics.",
     )
     evaluate.set_defaults(func=cmd_evaluate)
+
+    batch = subparsers.add_parser(
+        "batch", help="Score a CSV of reviews and write the results out."
+    )
+    batch.add_argument("input", help="Input CSV with a column of reviews.")
+    batch.add_argument(
+        "--output", type=str, default="results.csv",
+        help="Where to write the results CSV.",
+    )
+    batch.add_argument(
+        "--json", type=str, default="results.json",
+        help="Where to write the results JSON.",
+    )
+    batch.add_argument(
+        "--model", type=str, default=str(DEFAULT_MODEL_PATH),
+        help="Path to the trained model file.",
+    )
+    batch.add_argument(
+        "--text-column", type=str, default="text",
+        help="Name of the column holding the review text.",
+    )
+    batch.set_defaults(func=cmd_batch)
     return parser
 
 
