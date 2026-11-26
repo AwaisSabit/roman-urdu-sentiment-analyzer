@@ -67,6 +67,46 @@ ENGLISH_STOPWORDS = {
 
 STOPWORDS = ROMAN_URDU_STOPWORDS | ENGLISH_STOPWORDS
 
+# Short follow-up clauses the dataset generator appends to base reviews.
+# Stripping them recovers the base sentence, which is how the evaluation
+# split keeps near-duplicate reviews out of both train and test at once.
+FOLLOWUP_CLAUSES = {
+    "positive": [
+        "dobara zaroor aaunga", "highly recommended", "bohat khush hun",
+        "paisa wasool hai", "friends ko bhi recommend karunga",
+        "will order again", "bohat acha experience raha",
+    ],
+    "negative": [
+        "dobara kabhi nahi aaunga", "not recommended at all",
+        "bohat disappointed hun", "paisa zaya ho gaya",
+        "will not order again", "bohat bura experience raha",
+    ],
+    "neutral": [
+        "kuch khaas nahi tha", "theek hai", "average experience tha",
+        "na acha na bura", "it was fine", "normal tha",
+    ],
+}
+
+ALL_FOLLOWUPS = [
+    clause for clauses in FOLLOWUP_CLAUSES.values() for clause in clauses
+]
+
+
+def base_sentence(text: str) -> str:
+    """Strip a trailing follow-up clause, recovering the base review.
+
+    Used to group near-duplicate reviews so the evaluation split never
+    puts the same base review in both train and test.
+    """
+    lowered = text.lower().strip().rstrip(".")
+    for clause in ALL_FOLLOWUPS:
+        for sep in (", " + clause, ". " + clause, " and " + clause):
+            if lowered.endswith(sep):
+                return lowered[: -len(sep)].strip()
+        if lowered == clause:
+            return lowered
+    return lowered
+
 _URL_RE = re.compile(r"https?://\S+|www\.\S+")
 _NON_WORD_RE = re.compile(r"[^a-z\s]")  # drops punctuation and digits
 _SPACE_RE = re.compile(r"\s+")

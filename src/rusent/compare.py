@@ -9,13 +9,14 @@ from pathlib import Path
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, f1_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GroupShuffleSplit
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
 
 from .features import build_vectorizer
 from .model import DEFAULT_DATASET_PATH, LABELS, load_dataset
+from .preprocessing import base_sentence
 
 DEFAULT_REPORT_PATH = (
     Path(__file__).resolve().parents[2] / "reports" / "model-comparison.md"
@@ -36,12 +37,22 @@ def build_candidates() -> dict:
 def compare_models(texts, labels, test_size=0.2, random_state=42) -> dict:
     """Train each candidate on the train split and score it on the test split.
 
+    The split is grouped by base review sentence, so a review and its
+    longer follow-up version never land on opposite sides of the split —
+    a plain random split would leak and flatter the scores.
+
     Returns a dict of model name -> metrics (accuracy, macro F1, per-class
     precision/recall/F1, and the fitted pipeline).
     """
-    train_texts, test_texts, train_labels, test_labels = train_test_split(
-        texts, labels, test_size=test_size, random_state=random_state, stratify=labels
+    groups = [base_sentence(text) for text in texts]
+    splitter = GroupShuffleSplit(
+        n_splits=1, test_size=test_size, random_state=random_state
     )
+    train_idx, test_idx = next(splitter.split(texts, labels, groups))
+    train_texts = [texts[i] for i in train_idx]
+    test_texts = [texts[i] for i in test_idx]
+    train_labels = [labels[i] for i in train_idx]
+    test_labels = [labels[i] for i in test_idx]
     results = {}
     for name, classifier in build_candidates().items():
         pipeline = Pipeline(

@@ -8,7 +8,12 @@ Output: data/reviews.csv with columns: text, sentiment, topic, language
 
 import csv
 import random
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from rusent.preprocessing import FOLLOWUP_CLAUSES as FOLLOWUPS  # noqa: E402
 
 random.seed(42)
 
@@ -180,22 +185,8 @@ NEUTRAL = [
 ]
 
 # Short follow-up clauses that make longer, realistic reviews when combined.
-FOLLOWUPS = {
-    "positive": [
-        "dobara zaroor aaunga", "highly recommended", "bohat khush hun",
-        "paisa wasool hai", "friends ko bhi recommend karunga",
-        "will order again", "bohat acha experience raha",
-    ],
-    "negative": [
-        "dobara kabhi nahi aaunga", "not recommended at all",
-        "bohat disappointed hun", "paisa zaya ho gaya",
-        "will not order again", "bohat bura experience raha",
-    ],
-    "neutral": [
-        "kuch khaas nahi tha", "theek hai", "average experience tha",
-        "na acha na bura", "it was fine", "normal tha",
-    ],
-}
+# The clause lists live in rusent.preprocessing (imported above) so the
+# evaluation split can strip them back off and group near-duplicates.
 
 
 def build_rows(sentences, sentiment, target):
