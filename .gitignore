@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+models/*.joblib
+models/*.pkl
+*.joblib
+*.pkl
+.env
+.DS_Store
+.pytest_cache/
