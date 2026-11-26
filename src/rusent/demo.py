@@ -10,6 +10,9 @@ DEMO_REVIEWS = [
     ("delivery 3 ghante late thi, koi call bhi nahi ki", "negative"),
     ("khana theek tha, na bohat acha na bohat bura", "neutral"),
     ("The quality is fine for the price, nothing extraordinary", "neutral"),
+    # Mixed Roman Urdu + English in one review.
+    ("pizza was amazing, cheese bhi bohat fresh thi", "positive"),
+    ("app is too slow, order karna bohat mushkil hai", "negative"),
 ]
 
 
