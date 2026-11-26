@@ -119,6 +119,22 @@ signals, which is why they are never removed as stopwords.
 - Urdu script (not Roman Urdu) is not understood: such text comes back as
   uncertain neutral.
 
+## Release notes — Version 1.0.0
+
+First release. A complete Roman Urdu + English sentiment analyser:
+
+- 420 hand-written reviews (140 positive, 140 negative, 140 neutral) across
+  food, shopping, delivery and mobile topics, in Roman Urdu, English and mixed.
+- Roman Urdu spelling normalisation plus word (1, 2) and character (3, 5)
+  TF-IDF features, so spelling variation still matches.
+- Logistic Regression baseline with confidence scores and an uncertain flag;
+  Naive Bayes and LinearSVC compared on the same held-out set.
+- Full CLI: `train`, `predict`, `evaluate`, `batch`, `demo`, `top-words`,
+  `compare`.
+- Held-out results: accuracy 0.946, macro F1 0.938 (93 reviews, grouped
+  split). Weakest class: negative (F1 0.917).
+- 93 tests, all passing.
+
 ## Project layout
 
 ```
