@@ -113,6 +113,9 @@ def run_evaluation(
 ) -> dict:
     """Train the shipped model on the train split, evaluate on the test split,
     and write the Markdown and JSON reports. Returns the metrics."""
+    dataset_path = Path(dataset_path)
+    report_path = Path(report_path)
+    json_path = Path(json_path)
     df = load_dataset(dataset_path)
     texts = df["text"].tolist()
     labels = df["sentiment"].tolist()

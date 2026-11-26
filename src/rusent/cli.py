@@ -3,6 +3,7 @@
 import argparse
 import sys
 
+from .evaluate import DEFAULT_JSON_PATH, DEFAULT_REPORT_PATH, run_evaluation
 from .model import (
     DEFAULT_DATASET_PATH,
     DEFAULT_MODEL_PATH,
@@ -21,6 +22,19 @@ def _load_model_or_exit(model_path):
         print(f"No trained model found at {model_path}.", file=sys.stderr)
         print("Run `rusent train` first.", file=sys.stderr)
         raise SystemExit(2)
+
+
+def cmd_evaluate(args) -> int:
+    metrics = run_evaluation(args.dataset, args.report, args.json)
+    print(f"Test set size: {metrics['test_size']} reviews")
+    print(f"Accuracy: {metrics['accuracy']:.4f}")
+    print(f"Macro F1: {metrics['macro_f1']:.4f}")
+    for label, per in metrics["per_class"].items():
+        print(f"  {label}: precision {per['precision']:.3f}, "
+              f"recall {per['recall']:.3f}, F1 {per['f1']:.3f} "
+              f"(n={per['support']})")
+    print(f"Report written to {args.report} and {args.json}.")
+    return 0
 
 
 def cmd_train(args) -> int:
@@ -76,6 +90,23 @@ def build_parser() -> argparse.ArgumentParser:
         help="Where to save the trained model.",
     )
     train.set_defaults(func=cmd_train)
+
+    evaluate = subparsers.add_parser(
+        "evaluate", help="Print held-out accuracy, F1 and per-class scores."
+    )
+    evaluate.add_argument(
+        "--dataset", type=str, default=str(DEFAULT_DATASET_PATH),
+        help="Path to the reviews CSV file.",
+    )
+    evaluate.add_argument(
+        "--report", type=str, default=str(DEFAULT_REPORT_PATH),
+        help="Where to write the Markdown report.",
+    )
+    evaluate.add_argument(
+        "--json", type=str, default=str(DEFAULT_JSON_PATH),
+        help="Where to write the JSON metrics.",
+    )
+    evaluate.set_defaults(func=cmd_evaluate)
     return parser
 
 
