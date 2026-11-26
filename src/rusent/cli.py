@@ -3,7 +3,15 @@
 import argparse
 import sys
 
-from .model import DEFAULT_MODEL_PATH, UNCERTAIN_THRESHOLD, load_model, predict_sentiment
+from .model import (
+    DEFAULT_DATASET_PATH,
+    DEFAULT_MODEL_PATH,
+    UNCERTAIN_THRESHOLD,
+    load_dataset,
+    load_model,
+    predict_sentiment,
+    train_and_save,
+)
 
 
 def _load_model_or_exit(model_path):
@@ -13,6 +21,16 @@ def _load_model_or_exit(model_path):
         print(f"No trained model found at {model_path}.", file=sys.stderr)
         print("Run `rusent train` first.", file=sys.stderr)
         raise SystemExit(2)
+
+
+def cmd_train(args) -> int:
+    df = load_dataset(args.dataset)
+    model = train_and_save(args.dataset, args.model)
+    print(f"Trained on {len(df)} reviews "
+          f"({', '.join(f'{k}: {v}' for k, v in df['sentiment'].value_counts().items())}).")
+    print(f"Model saved to {args.model}.")
+    print("Run `rusent evaluate` to see the held-out scores.")
+    return 0
 
 
 def cmd_predict(args) -> int:
@@ -45,6 +63,19 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path to the trained model file.",
     )
     predict.set_defaults(func=cmd_predict)
+
+    train = subparsers.add_parser(
+        "train", help="Train the model on the review dataset and save it."
+    )
+    train.add_argument(
+        "--dataset", type=str, default=str(DEFAULT_DATASET_PATH),
+        help="Path to the reviews CSV file.",
+    )
+    train.add_argument(
+        "--model", type=str, default=str(DEFAULT_MODEL_PATH),
+        help="Where to save the trained model.",
+    )
+    train.set_defaults(func=cmd_train)
     return parser
 
 

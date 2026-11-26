@@ -24,7 +24,7 @@ UNCERTAIN_THRESHOLD = 0.5
 
 def load_dataset(path: Path = DEFAULT_DATASET_PATH) -> pd.DataFrame:
     """Load the review dataset as a DataFrame with text and sentiment."""
-    df = pd.read_csv(path, encoding="utf-8")
+    df = pd.read_csv(Path(path), encoding="utf-8")
     df = df.dropna(subset=["text", "sentiment"])
     df["text"] = df["text"].astype(str)
     return df
@@ -47,13 +47,14 @@ def train_model(texts, labels, classifier=None) -> Pipeline:
 
 
 def save_model(model: Pipeline, path: Path = DEFAULT_MODEL_PATH) -> Path:
+    path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, path)
     return path
 
 
 def load_model(path: Path = DEFAULT_MODEL_PATH) -> Pipeline:
-    return joblib.load(path)
+    return joblib.load(Path(path))
 
 
 def train_and_save(
@@ -61,6 +62,8 @@ def train_and_save(
     model_path: Path = DEFAULT_MODEL_PATH,
 ) -> Pipeline:
     """Train on the full dataset and save the model. Returns the model."""
+    dataset_path = Path(dataset_path)
+    model_path = Path(model_path)
     df = load_dataset(dataset_path)
     model = train_model(df["text"].tolist(), df["sentiment"].tolist())
     save_model(model, model_path)
