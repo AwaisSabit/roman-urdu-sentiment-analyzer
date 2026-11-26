@@ -6,7 +6,12 @@ import json
 import pandas as pd
 import pytest
 
-from rusent.batch import run_batch, score_texts
+from rusent.batch import (
+    format_breakdown,
+    run_batch,
+    score_texts,
+    sentiment_breakdown,
+)
 from rusent.cli import main
 from rusent.model import save_model, train_model
 
@@ -44,6 +49,56 @@ def write_reviews(path, rows):
         writer = csv.writer(f)
         writer.writerow(["text"])
         writer.writerows([[row] for row in rows])
+
+
+def test_sentiment_breakdown_counts_and_percentages():
+    results = [
+        {"label": "positive", "uncertain": False},
+        {"label": "positive", "uncertain": False},
+        {"label": "negative", "uncertain": True},
+        {"label": "neutral", "uncertain": False},
+    ]
+    breakdown = sentiment_breakdown(results)
+    assert breakdown["total"] == 4
+    assert breakdown["counts"] == {"positive": 2, "negative": 1, "neutral": 1}
+    assert breakdown["percentages"] == {
+        "positive": 50.0,
+        "negative": 25.0,
+        "neutral": 25.0,
+    }
+    assert breakdown["uncertain_count"] == 1
+
+
+def test_sentiment_breakdown_accepts_saved_json_rows():
+    rows = [
+        {"sentiment": "positive", "uncertain": False},
+        {"sentiment": "negative", "uncertain": False},
+    ]
+    breakdown = sentiment_breakdown(rows)
+    assert breakdown["counts"]["positive"] == 1
+    assert breakdown["counts"]["negative"] == 1
+
+
+def test_sentiment_breakdown_empty_list():
+    breakdown = sentiment_breakdown([])
+    assert breakdown["total"] == 0
+    assert breakdown["percentages"] == {
+        "positive": 0.0,
+        "negative": 0.0,
+        "neutral": 0.0,
+    }
+    assert breakdown["uncertain_count"] == 0
+
+
+def test_format_breakdown_renders_table():
+    breakdown = sentiment_breakdown(
+        [{"label": "positive", "uncertain": False}] * 3
+        + [{"label": "negative", "uncertain": True}]
+    )
+    text = format_breakdown(breakdown)
+    assert "Total reviews: 4" in text
+    assert "positive" in text and "75.0%" in text
+    assert "Uncertain predictions: 1" in text
 
 
 def test_score_texts_returns_one_result_each(model):
@@ -107,6 +162,7 @@ def test_batch_cli(model, tmp_path, capsys):
     ]) == 0
     out = capsys.readouterr().out
     assert "Scored 2 reviews" in out
-    assert "positive: 1 (50.0%)" in out
+    assert "positive" in out and "50.0%" in out
+    assert "Total reviews: 2" in out
     assert (tmp_path / "out.csv").exists()
     assert (tmp_path / "out.json").exists()

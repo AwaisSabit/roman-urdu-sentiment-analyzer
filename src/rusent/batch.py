@@ -5,7 +5,41 @@ from pathlib import Path
 
 import pandas as pd
 
-from .model import predict_sentiment
+from .model import LABELS, predict_sentiment
+
+
+def sentiment_breakdown(results: list) -> dict:
+    """Counts and percentages per sentiment for a list of scored reviews."""
+    total = len(results)
+    counts = {label: 0 for label in LABELS}
+    for result in results:
+        # Scored results use "label"; saved JSON rows use "sentiment".
+        label = result.get("label") or result.get("sentiment")
+        counts[label] += 1
+    return {
+        "total": total,
+        "counts": counts,
+        "percentages": {
+            label: round(100 * count / total, 1) if total else 0.0
+            for label, count in counts.items()
+        },
+        "uncertain_count": sum(1 for r in results if r["uncertain"]),
+    }
+
+
+def format_breakdown(breakdown: dict) -> str:
+    """A small readable table of the breakdown, with a bar per sentiment."""
+    lines = [f"Total reviews: {breakdown['total']}"]
+    for label in LABELS:
+        count = breakdown["counts"][label]
+        pct = breakdown["percentages"][label]
+        bar = "#" * int(pct // 2)
+        lines.append(f"  {label:9s} {count:4d} ({pct:5.1f}%) {bar}")
+    if breakdown["uncertain_count"]:
+        lines.append(
+            f"Uncertain predictions: {breakdown['uncertain_count']}"
+        )
+    return "\n".join(lines)
 
 
 def score_texts(model, texts) -> list:
@@ -56,19 +90,17 @@ def run_batch(
     out_df.to_csv(output_csv, index=False)
 
     total = len(results)
-    counts = {label: 0 for label in ("positive", "negative", "neutral")}
-    for r in results:
-        counts[r["label"]] += 1
+    breakdown = sentiment_breakdown(results)
     payload = {
         "total": total,
         "breakdown": {
             label: {
-                "count": count,
-                "percentage": round(100 * count / total, 1) if total else 0.0,
+                "count": breakdown["counts"][label],
+                "percentage": breakdown["percentages"][label],
             }
-            for label, count in counts.items()
+            for label in LABELS
         },
-        "uncertain_count": sum(1 for r in results if r["uncertain"]),
+        "uncertain_count": breakdown["uncertain_count"],
         "results": [
             {
                 "text": r["text"],

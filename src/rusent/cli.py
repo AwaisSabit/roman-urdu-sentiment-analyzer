@@ -3,7 +3,7 @@
 import argparse
 import sys
 
-from .batch import run_batch
+from .batch import format_breakdown, run_batch, sentiment_breakdown
 from .demo import print_demo, run_demo
 from .evaluate import DEFAULT_JSON_PATH, DEFAULT_REPORT_PATH, run_evaluation
 from .model import (
@@ -42,10 +42,7 @@ def cmd_batch(args) -> int:
         print(str(exc), file=sys.stderr)
         return 2
     print(f"Scored {payload['total']} reviews.")
-    for label, stats in payload["breakdown"].items():
-        print(f"  {label}: {stats['count']} ({stats['percentage']}%)")
-    if payload["uncertain_count"]:
-        print(f"Uncertain predictions: {payload['uncertain_count']}.")
+    print(format_breakdown(sentiment_breakdown(payload["results"])))
     print(f"Results written to {args.output} and {args.json}.")
     return 0
 
