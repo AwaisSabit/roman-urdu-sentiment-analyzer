@@ -68,7 +68,9 @@ def run_batch(
     input_path = Path(input_path)
     output_csv = Path(output_csv)
     output_json = Path(output_json)
-    df = pd.read_csv(input_path, encoding="utf-8")
+    df = pd.read_csv(
+        input_path, encoding="utf-8", keep_default_na=False, skip_blank_lines=False
+    )
     if text_column not in df.columns:
         raise ValueError(
             f"Column '{text_column}' not found in {input_path}. "
